@@ -1,8 +1,8 @@
 document.getElementById('activateFB').addEventListener('click', FizzBuzz);
+const ul = document.getElementById('outputList');
 
 function FizzBuzz(){
     let inputNumber = document.getElementById('inputNumber').value;
-    let ul = document.getElementById('outputList');
 
     for(i = 1; i <= inputNumber; i++){
 
@@ -20,7 +20,12 @@ function FizzBuzz(){
             output = i;
         }
 
-        let li = `<li class="list-group-item"> ${output} </li>`;
-        document.getElementById('outputList').innerHTML += li;
+        //let li = `<li class="list-group-item"> ${output} </li>`;
+        //ul.innerHTML += li;
+
+        let li = document.createElement('li');
+        li.setAttribute('class', `list-group-item`);
+        li.innerText = `${output}`;
+        ul.appendChild(li);
     }
 }
