@@ -2,11 +2,12 @@ document.getElementById('activateFB').addEventListener('click', FizzBuzz);
 let ul = document.getElementById('outputList');
 
 function FizzBuzz(){
+    //ul HAS TO BE EMPTIED EVERY TIME WE CLICK THE BUTTON OTHERWISE THE LIST ITEMS KEEP PILING UP
     ul.innerHTML = '';
     let inputNumber = document.getElementById('inputNumber').value;
 
     for(i = 1; i <= inputNumber; i++){
-
+        //output HAS TO BE RESET EVERY CYCLE
         let output = '';
 
         //appendChild li ADDON - part 1
